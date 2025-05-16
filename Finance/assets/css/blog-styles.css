@@ -1,0 +1,432 @@
+/* Blog Post Enhanced Styles */
+
+/* Card Layout for Blog Content */
+.blog-post-content .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeIn 0.8s ease-out;
+    padding: 20px;
+}
+
+.post-body {
+    flex: 1;
+    min-width: 65%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideInUp 0.5s ease-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.post-body:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.post-body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 0;
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+    transition: height 0.5s ease;
+}
+
+.post-body:hover::before {
+    height: 100%;
+}
+
+.post-sidebar {
+    width: 30%;
+    min-width: 280px;
+}
+
+.sidebar-widget {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideInRight 0.5s ease-out;
+}
+
+.sidebar-widget:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced Typography */
+.post-body h2 {
+    color: var(--primary-color);
+    font-size: 28px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+}
+
+.post-body h3 {
+    color: var(--primary-color);
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.post-body p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.post-body ul, .post-body ol {
+    margin-left: 20px;
+    margin-bottom: 25px;
+}
+
+.post-body li {
+    margin-bottom: 10px;
+    line-height: 1.7;
+}
+
+/* Featured Image */
+.post-image-full {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.post-image-full img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    display: block;
+    filter: brightness(0.95);
+}
+
+.post-image-full:hover img {
+    filter: brightness(1.05);
+    transform: scale(1.03);
+}
+
+/* Blog Header Enhancement */
+.single-post-header {
+    background: linear-gradient(rgba(0, 51, 102, 0.85), rgba(0, 51, 102, 0.85)), url('../images/digital-analytics.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 120px 0 60px;
+}
+
+.single-post-header h1 {
+    font-size: 36px;
+    max-width: 800px;
+    margin: 0 auto 15px;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.post-meta {
+    color: #ddd;
+    font-size: 16px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Call to Action Section */
+.post-cta {
+    background-color: var(--accent-color);
+    border-radius: 10px;
+    padding: 30px;
+    margin: 40px 0;
+    text-align: center;
+    border-left: 5px solid var(--primary-color);
+}
+
+.post-cta h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* Share Section */
+.post-share {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+    padding: 20px 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.post-share p {
+    margin-right: 15px;
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+.post-navigation {
+    margin: 30px 0;
+}
+
+/* Related Posts */
+.related-posts li, .resource-links li {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.related-posts li:last-child, .resource-links li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.related-posts a, .resource-links a {
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: block;
+    padding: 5px 0;
+}
+
+.related-posts a:hover, .resource-links a:hover {
+    color: var(--secondary-color);
+    transform: translateX(5px);
+}
+
+/* Newsletter Form */
+.newsletter {
+    background: linear-gradient(135deg, var(--primary-color), #004d99);
+    color: white;
+}
+
+.newsletter h3 {
+    color: white;
+}
+
+.newsletter p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.newsletter .form-group {
+    margin-bottom: 15px;
+}
+
+.newsletter input {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animation Classes for JavaScript */
+.animate-in {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards 0.2s;
+}
+
+/* Card hover effect */
+.blog-card {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover::after {
+    transform: scaleX(1);
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 992px) {
+    .blog-post-content .container {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .post-body, .post-sidebar {
+        width: 100%;
+    }
+    
+    .single-post-header h1 {
+        font-size: 32px;
+    }
+    
+    .blog-post {
+        margin-bottom: 25px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .post-body {
+        padding: 20px;
+    }
+    
+    .post-body h2 {
+        font-size: 24px;
+    }
+    
+    .post-body h3 {
+        font-size: 20px;
+    }
+    
+    .single-post-header h1 {
+        font-size: 28px;
+    }
+    
+    .post-cta {
+        padding: 20px;
+    }
+    
+    .blog-post .post-image img {
+        height: 200px;
+        object-fit: cover;
+    }
+    
+    .sidebar-widget {
+        padding: 15px;
+    }
+}
+
+/* Blog Card Layout Optimization */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.blog-post {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post .post-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.blog-post .post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.blog-post:hover .post-image img {
+    transform: scale(1.05);
+}
+
+.blog-post .post-date {
+    color: var(--secondary-color);
+    font-size: 14px;
+    margin: 15px 20px 5px;
+    font-weight: 500;
+}
+
+.blog-post h2 {
+    font-size: 20px;
+    margin: 5px 20px 10px;
+    line-height: 1.4;
+}
+
+.blog-post p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+    margin: 0 20px 15px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.blog-post .btn {
+    margin: 0 20px 20px;
+}
